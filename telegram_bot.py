@@ -1,9 +1,9 @@
 import logging
-from telegram import Update
+from telegram import Update, File
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters
 
 # Replace with your actual bot token
-BOT_TOKEN = '7568059591:AAG4ZmoAnbmZm0va-V3pyzC43qJe1AThZVI'
+BOT_TOKEN = 'your_bot_token'
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -14,7 +14,7 @@ async def start(update: Update, context):
     await update.message.reply_text('Hello! Send me a file and I will upload it to Dailymotion.')
 
 async def handle_file(update: Update, context):
-    file = await update.message.document.get_file()
+    file: File = await update.message.document.get_file()
     file_path = f"downloads/{update.message.document.file_name}"
     await file.download(file_path)
     await update.message.reply_text('File received! Now uploading to Dailymotion...')
