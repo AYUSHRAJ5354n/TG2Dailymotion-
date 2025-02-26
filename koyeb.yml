@@ -18,13 +18,12 @@ services:
           - name: http
             port: 80
         env:
-          - name: BOT_TOKEN
-            value: '7568059591:AAG4ZmoAnbmZm0va-V3pyzC43qJe1AThZVI'
+          - name: BOT_TOKEN ''
           - name: DAILY_MOTION_CLIENT_ID
-            value: '4b8ebba0a67b86ead065'
+            value: ''
           - name: DAILY_MOTION_CLIENT_SECRET
-            value: 'df6256d39ab33634919703751e792b9eda135087'
+            value: ''
           - name: DAILY_MOTION_USERNAME
-            value: 'akabarbabar8@gmail.com'
+            value: ''
           - name: DAILY_MOTION_PASSWORD
-            value: 'AYUSHRA5354N@'
+            value: ''
