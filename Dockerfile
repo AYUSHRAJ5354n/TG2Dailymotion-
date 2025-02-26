@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 80
 
 # Define environment variable
-ENV koyeb.yml
+ENV KOYEB_CONFIG=koyeb.yml
 
 # Run telegram_bot.py when the container launches
 CMD ["python", "./telegram_bot.py"]
